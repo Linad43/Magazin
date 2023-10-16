@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Toy {
     private int IDToy;
     private String name;
@@ -20,7 +22,15 @@ public class Toy {
         this.count = count;
         allCount += count;
     }
-
+    public static Toy addToy()
+    {
+        System.out.println("Введите название игрушки");
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
+        System.out.println("Введите кол-во данных игрушек");
+        int count = in.nextInt();
+        return new Toy(name, count);
+    }
     public int getIDToy() {
         return IDToy;
     }
